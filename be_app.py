@@ -18,7 +18,7 @@ def get_one_file(path):
     在path目录中随便选择个文件，返回路径+文件名的绝对路径
     '''
     files = os.listdir(path)
-    return path + '\\' + random.choice(files)
+    return path + '/' + random.choice(files)
 
 def send_email(src, dst, subject, contents, attachments):
     pwd = os.environ.get('wangyi_emai_auth')
@@ -33,7 +33,7 @@ def send_emails(src, tos, subject, contents, attachments):
 
 def daily_task():
     try:
-        p = r'D:\be-yourself\data'
+        p = '/root/be-yourself/data' # if windows another path
         path = get_one_file(p)
         src = '19121220286@163.com'
         tos = get_emails('emails.txt') 
@@ -55,3 +55,7 @@ if __name__ == '__main__':
 
     except Exception as e:
         print(f"{e} occured~")
+
+    # p = r'/root/be-yourself/data'
+    # path = get_one_file(p)
+    # print(path)
