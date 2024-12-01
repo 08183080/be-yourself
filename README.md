@@ -11,4 +11,4 @@
 - [x] 11/30，区间扫射[42000, 42602]，目前数据量总共 776
 
 # cmds
-```nohup python be_app.py > output.log 2>&1 &```
+```nohup python -u be_yourself.py > output.log 2>&1 &```
