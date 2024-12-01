@@ -21,7 +21,7 @@ def get_one(url):
         return title, content
 
 def write_one(title, content, path):
-    with open(path + '\\'+ title + '.txt', 'w', encoding='utf-8') as f:
+    with open(path + '/'+ title + '.txt', 'w', encoding='utf-8') as f:
         f.write(content)
 
 
@@ -30,4 +30,4 @@ if __name__ == '__main__':
     title, content = get_one(url)
     print(title)
     print(content)
-    write_one(title, content, 'D:\\be-yourself\\data')
+    write_one(title, content, '/root/be-yourself/data')
